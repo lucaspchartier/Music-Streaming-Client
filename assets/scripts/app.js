@@ -7,7 +7,7 @@
 // require('./example')
 
 const authEvents = require('./auth/events.js')
-const artistEvents = require('./books/events.js')
+const artistEvents = require('./artists/events.js')
 
 $(() => {
   // Auth events

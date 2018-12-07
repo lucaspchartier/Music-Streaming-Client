@@ -7,6 +7,7 @@
 // require('./example')
 
 const authEvents = require('./auth/events.js')
+const artistEvents = require('./books/events.js')
 
 $(() => {
   // Auth events
@@ -16,4 +17,5 @@ $(() => {
   $('#sign-out-button').on('click', authEvents.onSignOut)
 
   // Arists events
+  artistEvents.addHandlers()
 })

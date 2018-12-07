@@ -1,17 +1,31 @@
 body {
   background-color: $background-color;
+  color: $text-color;
+  font-family: Impact, sans-serif;
 }
 
 h1 {
-  text-align: center;
   padding: 25px;
+  text-align: center;
 }
 
 div {
-  text-align: center;
   padding: 25px;
+  text-align: center;
 }
 
 .hidden {
   visibility: hidden;
+}
+
+.success-message {
+  color: $success-message-color;
+  font-size: 20px;
+  text-align: center;
+}
+
+.error-message {
+  color: $error-message-color;
+  font-size: 20px;
+  text-align: center;
 }

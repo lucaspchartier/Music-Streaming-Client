@@ -23,6 +23,8 @@ const signInSuccess = function (signInResponse) {
   $('#sign-out-button').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
+  $('.content').removeClass('hidden')
+  $('.artist-box').removeClass('hidden')
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
@@ -39,6 +41,8 @@ const signOutSuccess = function (signOutResponse) {
   $('#sign-out-button').addClass('hidden')
   $('#sign-up-form').removeClass('hidden')
   $('#sign-in-form').removeClass('hidden')
+  $('.content').addClass('hidden')
+  $('.artist-box').addClass('hidden')
 }
 
 module.exports = {

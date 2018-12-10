@@ -55,15 +55,14 @@
         <button id="sign-out-button" class="hidden">Log Out</button>
       </div>
       <!--Artist content -->
-      <div id="content" class="content hidden"></div>
-      <!--Artist box -->
-      <div class="artist-box hidden">
-        <legend>Artists</legend>
-        <button id="createArtistButton" class="btn btn-default">Create Artist</button>
-        <button id="getArtistsButton" class="btn btn-default">Get Artists</button>
-        <button id="updateArtistButton" class="btn btn-default">Update Artist</button>
-        <button id="deleteArtistButton" class="btn btn-default">Delete Artist</button>
+      <div id="content" class="content hidden">
+        <!--Create Artist fox -->
+        <form id="create-artist-form">
+          <input type='text' placeholder='Name' name='artist[name]' required>
+          <input type='text' placeholder='Year Formed' name='artist[year_formed]' required>
+          <input type='text' placeholder='Genre' name='artist[genre]' required>
+          <input type='submit' value='Create Artist'>
+        </form>
       </div>
-
     </body>
 </html>

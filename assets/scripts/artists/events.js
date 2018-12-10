@@ -1,12 +1,15 @@
 'use strict'
 
+const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 // const store = require('./../store.js')
 
 const onCreateArtist = (event) => {
   event.preventDefault()
-  api.createArtist()
+  const artistData = getFormFields(event.target)
+  console.log(artistData)
+  api.createArtist(artistData)
     .then(ui.createArtistSuccess)
     .catch(ui.failure)
 }
@@ -35,7 +38,7 @@ const onDeleteArtist = (event) => {
 }
 
 const addHandlers = () => {
-  $('#createArtistButton').on('click', onCreateArtist)
+  $('#create-artist-form').on('submit', onCreateArtist)
   $('#getArtistsButton').on('click', onGetArtists)
   $('.content').on('click', '.update-artist', onUpdateArtist)
   $('.content').on('click', '.delete-artist', onDeleteArtist)

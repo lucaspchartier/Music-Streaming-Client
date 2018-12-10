@@ -26,10 +26,10 @@ const getArtists = function () {
   })
 }
 
-const updateArtist = function (artistData, id) {
+const updateArtist = function (artistData) {
   console.log(artistData)
   return $.ajax({
-    url: config.apiUrl + `/artists/${id}`,
+    url: config.apiUrl + `/artists/${artistData.artist.id}`,
     method: 'PATCH',
     contentType: 'application/json',
     headers: {

@@ -1,8 +1,8 @@
 {{#each artists as |artist|}}
 
   <div>
-    <section data-id={{artist.id}}>
-      <h1 data-id={{artist.id}}> <small>Name: {{artist.name}}<br>Year Formed: {{artist.year_formed}}<br>Genre: {{artist.genre}}</small></h1>
+    <section data-id="{{artist.id}}">
+      <h1 data-id={{artist.id}}> <small>ID: {{artist.id}}<br>Name: {{artist.name}}<br>Year Formed: {{artist.year_formed}}<br>Genre: {{artist.genre}}</small></h1>
       <button class="btn btn-default delete-artist">Remove Artist</button>
     </section>
   </div>

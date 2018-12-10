@@ -23,9 +23,9 @@ const onGetArtists = (event) => {
 const onUpdateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
-  // const id = $(event.target).closest('section').data('id')
+  console.log(artistData)
   api.updateArtist(artistData)
-    .then(() => onGetArtists(event))
+    .then(ui.updateArtistSuccess)
     .catch(ui.failure)
 }
 

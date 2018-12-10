@@ -8,3 +8,12 @@
 # Wireframes
 
 * [Wireframes](https://i.imgur.com/ory029I.jpg)
+
+# List of technologies used
+
+* HTML
+* CSS
+* JavaScript
+* jQuery
+* Handlebars
+* Ajax

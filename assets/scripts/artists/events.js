@@ -41,7 +41,7 @@ const addHandlers = () => {
   $('#create-artist-form').on('submit', onCreateArtist)
   $('#get-artists-button').on('submit', onGetArtists)
   $('#update-artist-form').on('submit', onUpdateArtist)
-  $('.content').on('click', '.delete-artist', onDeleteArtist)
+  $('.artist-list').on('click', '.delete-artist', onDeleteArtist)
 }
 
 module.exports = {

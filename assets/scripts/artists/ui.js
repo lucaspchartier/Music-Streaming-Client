@@ -18,7 +18,6 @@ const failure = () => {
 }
 
 const getArtistsSuccess = (response) => {
-  console.log('This is getArtists', response)
   const showArtistsHtml = showArtistsTemplate({ artists: response.artists })
   $('.artist-list').html(showArtistsHtml)
   $('.artist-message').html('Successfully retrieved artists!')

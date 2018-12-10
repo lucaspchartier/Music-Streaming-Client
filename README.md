@@ -1,4 +1,4 @@
-# Lucas' Music Streaming App (client)
+# Lucas' Music Streaming App (Client)
 
 # Links
 

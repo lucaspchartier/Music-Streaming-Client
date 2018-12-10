@@ -1,14 +1,8 @@
 {{#each artists as |artist|}}
-  {{log artist}}
 
   <div>
-    <section data-id="{{artist.id}}">
-      <h1 data-id="{{artist.id}}"> <small>Title: {{limit artist.title 10}}</small></h1>
-      {{#if artist}}
-        {{artist}}
-      {{else}}
-        No Artist provided.
-      {{/if}}
+    <section data-id={{artist.id}}>
+      <h1 data-id={{artist.id}}> <small>Title: {{artist.name}}</small></h1>
       <button class="btn btn-default delete-artist">Remove Artist</button>
     </section>
   </div>

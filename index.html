@@ -19,6 +19,31 @@
       <!-- Artist messages -->
       <div class="artist-message"></div>
 
+      <!--Artist content -->
+      <div id="content" class="content hidden">
+        <!--create artist form starts here! -->
+        <form id="create-artist-form">
+          <input type='text' placeholder='Name' name='artist[name]' required>
+          <input type='text' placeholder='Year Formed' name='artist[year_formed]' required>
+          <input type='text' placeholder='Genre' name='artist[genre]' required>
+          <input type='submit' value='Create Artist'>
+        </form>
+        <!--create artist form ends here! -->
+        <br>
+        <!-- get artists button goes here! -->
+        <form id="get-artists-button">
+          <input type='submit' value='Get Artists'>
+        </form>
+        <br>
+        <!-- update artist form starts here! -->
+        <form id="update-artist-form">
+          <input type='text' placeholder='Name' name='artist[name]' required>
+          <input type='text' placeholder='Year Formed' name='artist[year_formed]' required>
+          <input type='text' placeholder='Genre' name='artist[genre]' required>
+          <input type='submit' value='Update Artist'>
+        </form>
+        <!-- update artist form ends here! -->
+      </div>
       <!-- sign-up form starts here! -->
       <div class="form">
         <form id="sign-up-form">
@@ -54,15 +79,8 @@
         <!-- sign out button goes here! -->
         <button id="sign-out-button" class="hidden">Log Out</button>
       </div>
-      <!--Artist content -->
-      <div id="content" class="content hidden">
-        <!--Create Artist fox -->
-        <form id="create-artist-form">
-          <input type='text' placeholder='Name' name='artist[name]' required>
-          <input type='text' placeholder='Year Formed' name='artist[year_formed]' required>
-          <input type='text' placeholder='Genre' name='artist[genre]' required>
-          <input type='submit' value='Create Artist'>
-        </form>
+      <div class="artist-list">
+
       </div>
     </body>
 </html>

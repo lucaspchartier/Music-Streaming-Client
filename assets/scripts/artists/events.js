@@ -8,7 +8,6 @@ const ui = require('./ui.js')
 const onCreateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
-  console.log(artistData)
   api.createArtist(artistData)
     .then(ui.createArtistSuccess)
     .catch(ui.failure)
@@ -23,8 +22,9 @@ const onGetArtists = (event) => {
 
 const onUpdateArtist = (event) => {
   event.preventDefault()
-  const id = $(event.target).closest('section').data('id')
-  api.updateArtist(id)
+  const artistData = getFormFields(event.target)
+  // const id = $(event.target).closest('section').data('id')
+  api.updateArtist(artistData)
     .then(() => onGetArtists(event))
     .catch(ui.failure)
 }
@@ -39,8 +39,8 @@ const onDeleteArtist = (event) => {
 
 const addHandlers = () => {
   $('#create-artist-form').on('submit', onCreateArtist)
-  $('#getArtistsButton').on('click', onGetArtists)
-  $('.content').on('click', '.update-artist', onUpdateArtist)
+  $('#get-artists-button').on('submit', onGetArtists)
+  $('#update-artist-form').on('submit', onUpdateArtist)
   $('.content').on('click', '.delete-artist', onDeleteArtist)
 }
 

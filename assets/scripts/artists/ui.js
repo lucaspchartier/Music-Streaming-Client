@@ -4,7 +4,6 @@ const showArtistsTemplate = require('../templates/artist-listing.handlebars')
 // const store = require('./../store.js')
 
 const createArtistSuccess = () => {
-  console.log('This is createArtist', createArtistSuccess)
   $('.artist-message').html('Successfully created artist!')
   $('.artist-message').addClass('success-message')
   $('.artist-message').removeClass('error-message')
@@ -18,10 +17,10 @@ const failure = () => {
   // $('.artist-message').empty('error-message')
 }
 
-const getArtistsSuccess = (data) => {
-  console.log('This is getArtists', getArtistsSuccess)
-  const showArtistsHtml = showArtistsTemplate({ artists: data.artist })
-  $('.content').html(showArtistsHtml)
+const getArtistsSuccess = (response) => {
+  console.log('This is getArtists', response)
+  const showArtistsHtml = showArtistsTemplate({ artists: response.artists })
+  $('.artist-list').html(showArtistsHtml)
   $('.artist-message').html('Successfully retrieved artists!')
   $('.artist-message').addClass('success-message')
   $('.artist-message').removeClass('error-message')

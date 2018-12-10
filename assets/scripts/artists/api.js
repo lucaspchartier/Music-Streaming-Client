@@ -26,14 +26,16 @@ const getArtists = function () {
   })
 }
 
-const updateArtist = function (id) {
+const updateArtist = function (artistData, id) {
+  console.log(artistData)
   return $.ajax({
     url: config.apiUrl + `/artists/${id}`,
     method: 'PATCH',
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`
-    }
+    },
+    data: JSON.stringify(artistData)
   })
 }
 

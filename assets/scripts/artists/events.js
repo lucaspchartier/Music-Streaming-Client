@@ -8,6 +8,7 @@ const ui = require('./ui.js')
 const onCreateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
+  $(event.target).trigger('reset')
   api.createArtist(artistData)
     .then(ui.createArtistSuccess)
     .catch(ui.failure)
@@ -23,6 +24,7 @@ const onGetArtists = (event) => {
 const onUpdateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
+  $(event.target).trigger('reset')
   api.updateArtist(artistData)
     .then(ui.updateArtistSuccess)
     .catch(ui.failure)

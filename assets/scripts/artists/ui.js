@@ -5,11 +5,11 @@ const store = require('./../store.js')
 
 const createArtistSuccess = (createArtistResponse) => {
   store.artist = createArtistResponse.artist
-  $('.get-artists-message').html('Successfully created artist!')
-  $('.get-artists-message').addClass('success-message')
-  $('.get-artists-message').removeClass('error-message')
+  $('.artist-message').html('Successfully created artist!')
+  $('.artist-message').addClass('success-message')
+  $('.artist-message').removeClass('error-message')
   setTimeout(function () {
-    $('.get-artists-message').empty()
+    $('.artist-message').empty()
   }, 2000)
 }
 
@@ -25,11 +25,11 @@ const failure = () => {
 const getArtistsSuccess = (response) => {
   const showArtistsHtml = showArtistsTemplate({ artists: response.artists })
   $('.artist-list').html(showArtistsHtml)
-  $('.get-artists-message').html('Successfully retrieved artists!')
-  $('.get-artists-message').addClass('success-message')
-  $('.get-artists-message').removeClass('error-message')
+  $('.artist-message').html('Successfully retrieved artists!')
+  $('.artist-message').addClass('success-message')
+  $('.artist-message').removeClass('error-message')
   setTimeout(function () {
-    $('.get-artists-message').empty()
+    $('.artist-message').empty()
   }, 2000)
 }
 
@@ -40,20 +40,20 @@ const getArtistsAutoSuccess = (response) => {
 
 const updateArtistSuccess = (updateArtistResponse) => {
   store.artist = updateArtistResponse.artist
-  $('.update-artist-message').html('Successfully updated artist!')
-  $('.update-artist-message').addClass('success-message')
-  $('.update-artist-message').removeClass('error-message')
+  $('.artist-message').html('Successfully updated artist!')
+  $('.artist-message').addClass('success-message')
+  $('.artist-message').removeClass('error-message')
   setTimeout(function () {
-    $('.update-artist-message').empty()
+    $('.artist-message').empty()
   }, 2000)
 }
 
 const deleteArtistSuccess = () => {
-  $('.delete-artist-message').html('Successfully deleted artist!')
-  $('.delete-artist-message').addClass('success-message')
-  $('.delete-artist-message').removeClass('error-message')
+  $('.artist-message').html('Successfully deleted artist!')
+  $('.artist-message').addClass('success-message')
+  $('.artist-message').removeClass('error-message')
   setTimeout(function () {
-    $('.delete-artist-message').empty()
+    $('.artist-message').empty()
   }, 2000)
 }
 

@@ -26,7 +26,7 @@ const onUpdateArtist = (event) => {
   const artistData = getFormFields(event.target)
   $(event.target).trigger('reset')
   api.updateArtist(artistData)
-    .then(ui.updateArtistSuccess)
+    .then(() => onGetArtists(event))
     .catch(ui.failure)
 }
 

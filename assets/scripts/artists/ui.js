@@ -27,7 +27,6 @@ const getArtistsSuccess = (response) => {
 }
 
 const updateArtistSuccess = () => {
-  console.log('This is updateArtist', updateArtistSuccess)
   $('.artist-message').html('Successfully updated artist!')
   $('.artist-message').addClass('success-message')
   $('.artist-message').removeClass('error-message')

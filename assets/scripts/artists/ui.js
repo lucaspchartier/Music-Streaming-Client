@@ -34,7 +34,6 @@ const updateArtistSuccess = () => {
 }
 
 const deleteArtistSuccess = () => {
-  console.log('This is deleteArtist', deleteArtistSuccess)
   $('.artist-message').html('Successfully deleted artist!')
   $('.artist-message').addClass('success-message')
   $('.artist-message').removeClass('error-message')

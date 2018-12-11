@@ -23,7 +23,6 @@ const onGetArtists = (event) => {
 const onUpdateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
-  console.log(artistData)
   api.updateArtist(artistData)
     .then(ui.updateArtistSuccess)
     .catch(ui.failure)

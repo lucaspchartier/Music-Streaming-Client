@@ -10,7 +10,7 @@ const onCreateArtist = (event) => {
   const artistData = getFormFields(event.target)
   $(event.target).trigger('reset')
   api.createArtist(artistData)
-    .then(ui.createArtistSuccess)
+    .then(() => onGetArtists(event))
     .catch(ui.failure)
 }
 

@@ -37,9 +37,17 @@ const onSignOut = function () {
     .catch(ui.failure)
 }
 
+const addHandlers = function () {
+  $('#sign-up-form').on('submit', onSignUp)
+  $('#sign-in-form').on('submit', onSignIn)
+  $('#change-password-form').on('submit', onChangePassword)
+  $('#sign-out-button').on('click', onSignOut)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  addHandlers
 }

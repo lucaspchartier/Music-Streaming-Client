@@ -8,7 +8,7 @@ const signUpSuccess = function (signUpResponse) {
   $('.auth-message').removeClass('error-message')
   setTimeout(function () {
     $('.auth-message').empty()
-  }, 1000)
+  }, 2000)
 }
 
 const failure = function (failureResponse) {
@@ -17,7 +17,7 @@ const failure = function (failureResponse) {
   $('.auth-message').removeClass('success-message')
   setTimeout(function () {
     $('.auth-message').empty()
-  }, 1000)
+  }, 2000)
 }
 
 const signInSuccess = function (signInResponse) {
@@ -32,7 +32,7 @@ const signInSuccess = function (signInResponse) {
   $('.content').removeClass('hidden')
   setTimeout(function () {
     $('.auth-message').empty()
-  }, 1000)
+  }, 2000)
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
@@ -41,7 +41,7 @@ const changePasswordSuccess = function (changePasswordResponse) {
   $('.auth-message').removeClass('error-message')
   setTimeout(function () {
     $('.auth-message').empty()
-  }, 1000)
+  }, 2000)
 }
 
 const signOutSuccess = function (signOutResponse) {
@@ -55,7 +55,7 @@ const signOutSuccess = function (signOutResponse) {
   $('.content').addClass('hidden')
   setTimeout(function () {
     $('.auth-message').empty()
-  }, 1000)
+  }, 2000)
 }
 
 module.exports = {

@@ -10,7 +10,9 @@ const onCreateArtist = (event) => {
   const artistData = getFormFields(event.target)
   $(event.target).trigger('reset')
   api.createArtist(artistData)
-    .then(() => onGetArtists(event))
+    .then(ui.createArtistSuccess)
+    .then(() => api.getArtists())
+    .then(ui.getArtistsAutoSuccess)
     .catch(ui.failure)
 }
 
@@ -26,7 +28,9 @@ const onUpdateArtist = (event) => {
   const artistData = getFormFields(event.target)
   $(event.target).trigger('reset')
   api.updateArtist(artistData)
-    .then(() => onGetArtists(event))
+    .then(ui.updateArtistSuccess)
+    .then(() => api.getArtists())
+    .then(ui.getArtistsAutoSuccess)
     .catch(ui.failure)
 }
 
@@ -34,7 +38,9 @@ const onDeleteArtist = (event) => {
   event.preventDefault()
   const id = $(event.target).closest('section').data('id')
   api.deleteArtist(id)
-    .then(() => onGetArtists(event))
+    .then(ui.deleteArtistSuccess)
+    .then(() => api.getArtists())
+    .then(ui.getArtistsAutoSuccess)
     .catch(ui.failure)
 }
 

@@ -32,6 +32,7 @@ const onChangePassword = function (event) {
 }
 
 const onSignOut = function () {
+  $('.form').trigger('reset')
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.failure)

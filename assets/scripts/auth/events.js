@@ -7,7 +7,7 @@ const ui = require('./ui.js')
 const onSignUp = function (event) {
   event.preventDefault()
   const userData = getFormFields(event.target)
-  $(event.target).trigger('reset')
+  $('.form').trigger('reset')
   api.signUp(userData)
     .then(ui.signUpSuccess)
     .catch(ui.failure)
@@ -16,7 +16,7 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   event.preventDefault()
   const userData = getFormFields(event.target)
-  $(event.target).trigger('reset')
+  $('.form').trigger('reset')
   api.signIn(userData)
     .then(ui.signInSuccess)
     .catch(ui.failure)
@@ -25,7 +25,7 @@ const onSignIn = function (event) {
 const onChangePassword = function (event) {
   event.preventDefault()
   const userData = getFormFields(event.target)
-  $(event.target).trigger('reset')
+  $('.form').trigger('reset')
   api.changePassword(userData)
     .then(ui.changePasswordSuccess)
     .catch(ui.failure)

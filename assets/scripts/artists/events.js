@@ -3,12 +3,10 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
-// const store = require('./../store.js')
 
 const onCreateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
-  $('#content').empty()
   api.createArtist(artistData)
     .then(ui.createArtistSuccess)
     .then(() => api.getArtists())
@@ -26,7 +24,6 @@ const onGetArtists = (event) => {
 const onUpdateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
-  $('#content').empty()
   api.updateArtist(artistData)
     .then(ui.updateArtistSuccess)
     .then(() => api.getArtists())

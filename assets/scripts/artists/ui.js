@@ -8,6 +8,7 @@ const createArtistSuccess = (createArtistResponse) => {
   $('.artist-message').html('Successfully created artist!')
   $('.artist-message').addClass('success-message')
   $('.artist-message').removeClass('error-message')
+  $('#create-artist-form').trigger('reset')
   setTimeout(function () {
     $('.artist-message').empty()
   }, 2000)
@@ -43,6 +44,7 @@ const updateArtistSuccess = (updateArtistResponse) => {
   $('.artist-message').html('Successfully updated artist!')
   $('.artist-message').addClass('success-message')
   $('.artist-message').removeClass('error-message')
+  $('#update-artist-form').trigger('reset')
   setTimeout(function () {
     $('.artist-message').empty()
   }, 2000)

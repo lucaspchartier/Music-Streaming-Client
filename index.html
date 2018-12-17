@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Music Streaming App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Music Streaming App</h1>
+      <!-- Auth messages -->
+      <div class="auth-message"></div>
+
+      <!-- Artist messages -->
+      <div class="artist-message"></div>
+
+      <!--Artist content -->
+      <div id="content" class="content hidden">
+        <!--create artist form starts here! -->
+        <form id="create-artist-form" class="hidden">
+          <input type='text' placeholder='Artist Name' name='artist[name]' required>
+          <input type='text' placeholder='Year Formed' name='artist[year_formed]' required>
+          <input type='text' placeholder='Genre' name='artist[genre]' required>
+          <input type='submit' value='Create Artist'>
+        </form>
+        <!--create artist form ends here! -->
+        <br>
+        <!-- get artists button goes here! -->
+        <form id="get-artists-button" class="hidden">
+          <input type='submit' value='Get Artists'>
+        </form>
+        <br>
+        <!-- update artist form starts here! -->
+        <form id="update-artist-form" class="hidden">
+          <input type='text' placeholder='Artist ID' name='artist[id]' required>
+          <input type='text' placeholder='Artist Name' name='artist[name]' required>
+          <input type='text' placeholder='Year Formed' name='artist[year_formed]' required>
+          <input type='text' placeholder='Genre' name='artist[genre]' required>
+          <input type='submit' value='Update Artist'>
+        </form>
+        <!-- update artist form ends here! -->
+        <br>
+        <!-- artist list starts here! -->
+        <div class="artist-list"></div>
+        <!-- artist list ends here! -->
+      </div>
+      <div class="form">
+        <!-- sign-up form starts here! -->
+        <form id="sign-up-form" class="form">
+          <legend>Sign Up</legend>
+          <input name="credentials[email]" type="text" placeholder="email"/>
+          <input name="credentials[password]" type="password" placeholder="password"/>
+          <input name="credentials[password_confirmation]" type="password" placeholder="confirm password"/>
+          <input type="submit" />
+        </form>
+        <!-- sign-up form ends here! -->
+        <br>
+
+        <!-- sign-in form starts here! -->
+        <form id="sign-in-form" class="form">
+          <legend>Log In</legend>
+          <input name="credentials[email]" type="text" placeholder="email"/>
+          <input name="credentials[password]" type="password" placeholder="password"/>
+          <input type="submit" />
+        </form>
+        <!--sign-in form ends here! -->
+        <br>
+
+        <!-- change password form starts here! -->
+        <form id="change-password-form" class="form hidden">
+          <legend>Change Password</legend>
+          <input name="passwords[old]" type="password" placeholder="old password"/>
+          <input name="passwords[new]" type="password" placeholder="new password"/>
+          <input type="submit" />
+        </form>
+        <!-- change password form ends here! -->
+        <br>
+
+        <!-- sign out button goes here! -->
+        <button id="sign-out-button" class="form hidden">Log Out</button>
+      </div>
+    </body>
+</html>

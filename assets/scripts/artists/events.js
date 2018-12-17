@@ -8,7 +8,7 @@ const ui = require('./ui.js')
 const onCreateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
-  $(event.target).trigger('reset')
+  $('#content').empty()
   api.createArtist(artistData)
     .then(ui.createArtistSuccess)
     .then(() => api.getArtists())
@@ -26,7 +26,7 @@ const onGetArtists = (event) => {
 const onUpdateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
-  $(event.target).trigger('reset')
+  $('#content').empty()
   api.updateArtist(artistData)
     .then(ui.updateArtistSuccess)
     .then(() => api.getArtists())

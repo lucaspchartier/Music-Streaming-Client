@@ -29,7 +29,10 @@ const signInSuccess = function (signInResponse) {
   $('#sign-out-button').removeClass('hidden')
   $('#sign-up-form').addClass('hidden')
   $('#sign-in-form').addClass('hidden')
-  $('.content').removeClass('hidden')
+  $('#create-artist-form').removeClass('hidden')
+  $('#get-artists-button').removeClass('hidden')
+  $('#update-artist-form').removeClass('hidden')
+  $('#content').removeClass('hidden')
   setTimeout(function () {
     $('.auth-message').empty()
   }, 2000)
@@ -52,7 +55,10 @@ const signOutSuccess = function (signOutResponse) {
   $('#sign-out-button').addClass('hidden')
   $('#sign-up-form').removeClass('hidden')
   $('#sign-in-form').removeClass('hidden')
-  $('.content').addClass('hidden')
+  $('#create-artist-form').addClass('hidden')
+  $('#get-artists-button').addClass('hidden')
+  $('#update-artist-form').addClass('hidden')
+  $('.artist-list').empty()
   setTimeout(function () {
     $('.auth-message').empty()
   }, 2000)

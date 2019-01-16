@@ -8,6 +8,7 @@
 
 const authEvents = require('./auth/events.js')
 const artistEvents = require('./artists/events.js')
+const releaseEvents = require('./releases/events.js')
 
 $(() => {
   // Auth events
@@ -15,4 +16,7 @@ $(() => {
 
   // Arists events
   artistEvents.addHandlers()
+
+  // Releases events
+  releaseEvents.addHandlers()
 })

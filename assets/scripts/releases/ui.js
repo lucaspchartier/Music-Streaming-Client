@@ -1,6 +1,5 @@
 'use strict'
 
-// const showReleasesTemplate = require('../templates/release-listing.handlebars')
 const store = require('./../store.js')
 
 const createReleaseSuccess = (createReleaseResponse) => {

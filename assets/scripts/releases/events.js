@@ -26,7 +26,9 @@ const onUpdateRelease = (event) => {
 
 const onDeleteRelease = (event) => {
   event.preventDefault()
+  // debugger
   const id = $(event.target).closest('section').data('id')
+  console.log(id)
   api.deleteRelease(id)
     .then(ui.deleteReleaseSuccess)
     .then(() => api.getReleases())
@@ -35,9 +37,9 @@ const onDeleteRelease = (event) => {
 }
 
 const addHandlers = () => {
-  $('#create-release-form').on('submit', onCreateRelease)
-  $('#update-release-form').on('submit', onUpdateRelease)
-  $('.release-list').on('click', '.delete-release', onDeleteRelease)
+  $('.create-release-form').on('submit', onCreateRelease)
+  $('.artist-list').on('submit', onUpdateRelease)
+  $('.artist-list').on('click', '.delete-release', onDeleteRelease)
 }
 
 module.exports = {

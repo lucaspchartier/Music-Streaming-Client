@@ -1,5 +1,9 @@
 {{#each artists as |artist|}}
 
+{{#each artist.releases as |release|}}
+  {{log release}}
+{{/each}}
+
   <div>
     <section data-id="{{artist.id}}">
       <h1 data-id={{artist.id}}><small>
@@ -7,35 +11,16 @@
         Artist Name: {{artist.name}}<br>
         Year Formed: {{artist.year_formed}}<br>
         Genre: {{artist.genre}}
-        <br>
-        <button class="btn btn-default create-release">Create Album</button>
-        {{#each releases as |release|}}
-          <section data-id="{{release.id}}">
-            <h4 data-id={{release.id}}><small>
-              Album ID: {{release.id}}<br>
-              Album Title: {{release.title}}<br>
-              Year Released: {{release.year_released}}<br>
-              Number of Tracks: {{release.number_of_tracks}}
-            </small></h4>
-            <button class="btn btn-default update-release">Update Album</button>
-            <button class="btn btn-default delete-release">Remove Album</button>
-          </section>
-        {{/each}}
-        <!-- <form class="create-release-form" class="hidden">
-          <input type='text' placeholder='Title' name='release[title]' required>
-          <input type='text' placeholder='Year Released' name='release[year_released]' required>
-          <input type='text' placeholder='Number of Tracks' name='release[number_of_tracks]' required>
-          <input type='submit' value='Create Album'>
-        </form>
-        <br>
-        <form class="update-release-form" class="hidden">
-          <input type='text' placeholder='Album ID' name='release[id]' required>
-          <input type='text' placeholder='Title' name='release[title]' required>
-          <input type='text' placeholder='Year Released' name='release[year_released]' required>
-          <input type='text' placeholder='Number of Tracks' name='release[number_of_tracks]' required>
-          <input type='submit' value='Update Album'>
-        </form> -->
-      </small></h1>
+          <h4 data-id={{release.id}}><small>
+            Album ID: {{release.id}}<br>
+            Album Title: {{release.title}}<br>
+            Year Released: {{release.year_released}}<br>
+            Number of Tracks: {{release.number_of_tracks}}
+          </small></h4>
+          <button class="btn btn-default create-release">Create Album</button>
+          <button class="btn btn-default update-release">Update Album</button>
+          <button class="btn btn-default delete-release">Remove Album</button>
+      <small></h1>
       <button class="btn btn-default delete-artist">Remove Artist</button>
     </section>
   </div>

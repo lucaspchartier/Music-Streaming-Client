@@ -7,7 +7,7 @@ const createReleaseSuccess = (createReleaseResponse) => {
   $('.release-message').html('Successfully created release!')
   $('.release-message').addClass('success-message')
   $('.release-message').removeClass('error-message')
-  $('#create-release-form').trigger('reset')
+  $('.create-release-form').trigger('reset')
   setTimeout(function () {
     $('.release-message').empty()
   }, 2000)
@@ -27,7 +27,7 @@ const updateReleaseSuccess = (updateReleaseResponse) => {
   $('.release-message').html('Successfully updated release!')
   $('.release-message').addClass('success-message')
   $('.release-message').removeClass('error-message')
-  $('#update-release-form').trigger('reset')
+  $('.update-release-form').trigger('reset')
   setTimeout(function () {
     $('.release-message').empty()
   }, 2000)

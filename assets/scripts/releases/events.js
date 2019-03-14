@@ -1,28 +1,28 @@
 'use strict'
 
-const getFormFields = require('../../../lib/get-form-fields.js')
+// const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
-const onCreateRelease = (event) => {
-  event.preventDefault()
-  const releaseData = getFormFields(event.target)
-  api.createRelease(releaseData)
-    .then(ui.createReleaseSuccess)
-    .then(() => api.getReleases())
-    .then(ui.getReleasesAutoSuccess)
-    .catch(ui.failure)
-}
-
-const onUpdateRelease = (event) => {
-  event.preventDefault()
-  const releaseData = getFormFields(event.target)
-  api.updateRelease(releaseData)
-    .then(ui.updateReleaseSuccess)
-    .then(() => api.getReleases())
-    .then(ui.getReleasesAutoSuccess)
-    .catch(ui.failure)
-}
+// const onCreateRelease = (event) => {
+//   event.preventDefault()
+//   const releaseData = getFormFields(event.target)
+//   api.createRelease(releaseData)
+//     .then(ui.createReleaseSuccess)
+//     .then(() => api.getReleases())
+//     .then(ui.getReleasesAutoSuccess)
+//     .catch(ui.failure)
+// }
+//
+// const onUpdateRelease = (event) => {
+//   event.preventDefault()
+//   const releaseData = getFormFields(event.target)
+//   api.updateRelease(releaseData)
+//     .then(ui.updateReleaseSuccess)
+//     .then(() => api.getReleases())
+//     .then(ui.getReleasesAutoSuccess)
+//     .catch(ui.failure)
+// }
 
 const onDeleteRelease = (event) => {
   event.preventDefault()
@@ -37,8 +37,8 @@ const onDeleteRelease = (event) => {
 }
 
 const addHandlers = () => {
-  $('.create-release-form').on('submit', onCreateRelease)
-  $('.artist-list').on('submit', onUpdateRelease)
+  // $('.create-release-form').on('submit', onCreateRelease)
+  // $('.artist-list').on('submit', onUpdateRelease)
   $('.artist-list').on('click', '.delete-release', onDeleteRelease)
 }
 

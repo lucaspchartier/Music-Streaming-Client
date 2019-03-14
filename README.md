@@ -1,27 +1,27 @@
-# Lucas' Music Streaming App (Client)
+# Music Database App (Client)
 
 # How it works
 
-### Once the user signs in, the user can add, display, update, and remove artists of his or her choosing. Similar to Spotify and other similar music streaming apps, the user can build his or her library with a wide variety of artists and customize it to their liking.
+### Once the user signs in, the user can add, display, update, and remove artists of his or her choosing. Similar to Spotify and other similar music apps, the user can build his or her library with a wide variety of artists and customize it to their liking.
 
 # Links
 
-* [Music Streaming API](https://github.com/lucaspchartier/Music-Streaming-API)
-* [Deployed Site](https://lucaspchartier.github.io/Music-Streaming-Client/)
+* [Music Database API](https://github.com/lucaspchartier/Music-Database-API)
+* [Deployed Site](https://lucaspchartier.github.io/Music-Database-Client/)
 * [Heroku](https://salty-wave-91914.herokuapp.com/)
 
 # Wireframes and user stories
 
 * [Wireframes](https://i.imgur.com/ory029I.jpg)
 
-1. User signs up
-2. User logs in
-3. User can change password if desired
-4. User can add artists to his or her liking
-5. User can list the artists he or she has added
-6. User can update an artist's information whenever necessary
-7. User can remove an artist if he or she no longer wishes to continue having that artist on their list
-8. After each session, the user logs out
+1. As a user, I can sign up
+2. As a signed up user, I can log in
+3. As a signed in user, I can add artists to my liking
+4. As a signed in user, I can list the artists I have added so far
+5. As a signed in user, I can update an artist's information
+6. As a signed in user, I can remove an artist if I no longer wishes to continue having that artist on their list
+7. As a signed in user, I can change my password if desired
+8. As a signed in user, I can log out whenever necessary
 
 # List of technologies used
 

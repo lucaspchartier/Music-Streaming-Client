@@ -1,4 +1,5 @@
 {{#each artists as |artist|}}
+  {{log artist}}
 
   <div>
     <section data-id="{{artist.id}}">
@@ -9,19 +10,21 @@
         Genre: {{artist.genre}}
         <br>
         <button class="btn btn-default create-release">Create Album</button>
-        <!-- <div>
-          <section data-id="{{release.id}}">
-            <h4 data-id="{{release.id}}"><small>
-              Album ID: {{release.id}}<br>
-              Album Title: {{release.title}}<br>
-              Year Released: {{release.year_released}}<br>
-              Number of Tracks: {{release.number_of_tracks}}
-              {{log release}}
-            </small></h4>
-            <button class="btn btn-default update-release">Update Album</button>
-            <button class="btn btn-default delete-release">Remove Album</button>
-          </section>
-        </div> -->
+        {{#each artist.releases as |release|}}
+          <div>
+            <section data-id="{{release.id}}">
+              <h4 data-id="{{release.id}}"><small>
+                Album ID: {{release.id}}<br>
+                Album Title: {{release.title}}<br>
+                Year Released: {{release.year_released}}<br>
+                Number of Tracks: {{release.number_of_tracks}}
+                {{log release}}
+              </small></h4>
+              <button class="btn btn-default update-release">Update Album</button>
+              <button class="btn btn-default delete-release">Remove Album</button>
+            </section>
+          </div>
+        {{/each}}
       <small></h1>
       <button class="btn btn-default delete-artist">Remove Artist</button>
     </section>

@@ -9,8 +9,8 @@ const ui = require('./ui.js')
 //   const releaseData = getFormFields(event.target)
 //   api.createRelease(releaseData)
 //     .then(ui.createReleaseSuccess)
-//     .then(() => api.getReleases())
-//     .then(ui.getReleasesAutoSuccess)
+//     .then(() => api.getArtists())
+//     .then(ui.getArtistsAutoSuccess)
 //     .catch(ui.failure)
 // }
 //
@@ -19,8 +19,8 @@ const ui = require('./ui.js')
 //   const releaseData = getFormFields(event.target)
 //   api.updateRelease(releaseData)
 //     .then(ui.updateReleaseSuccess)
-//     .then(() => api.getReleases())
-//     .then(ui.getReleasesAutoSuccess)
+//     .then(() => api.getArtists())
+//     .then(ui.getArtistsAutoSuccess)
 //     .catch(ui.failure)
 // }
 
@@ -31,8 +31,8 @@ const onDeleteRelease = (event) => {
   console.log(id)
   api.deleteRelease(id)
     .then(ui.deleteReleaseSuccess)
-    .then(() => api.getReleases())
-    .then(ui.getReleasesAutoSuccess)
+    .then(() => api.getArtists())
+    .then(ui.getArtistsAutoSuccess)
     .catch(ui.failure)
 }
 

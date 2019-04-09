@@ -2,7 +2,8 @@
 
 // const getFormFields = require('../../../lib/get-form-fields.js')
 const releaseApi = require('./api.js')
-const artistApi = require('../artists/api.js')
+// const artistApi = require('../artists/api.js')
+const artistEvents = require('../artists/events.js')
 const ui = require('./ui.js')
 
 // const onCreateRelease = (event) => {
@@ -26,13 +27,15 @@ const ui = require('./ui.js')
 // }
 
 const onDeleteRelease = (event) => {
+  console.log('this is onDeleteRelease', onDeleteRelease)
   event.preventDefault()
   const id = $(event.target).closest('section').data('id')
   console.log(id)
   releaseApi.deleteRelease(id)
     .then(ui.deleteReleaseSuccess)
-    .then(() => artistApi.getArtists())
-    .then(ui.getArtistsAutoSuccess)
+    // .then(() => artistApi.getArtists())
+    // .then(ui.getArtistsAutoSuccess)
+    .then(() => artistEvents.onGetArtists())
     .catch(ui.failure)
 }
 

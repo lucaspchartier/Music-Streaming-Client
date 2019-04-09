@@ -15,7 +15,9 @@ const onCreateArtist = (event) => {
 }
 
 const onGetArtists = (event) => {
-  event.preventDefault()
+  if (event) {
+    event.preventDefault()
+  }
   api.getArtists()
     .then(ui.getArtistsSuccess)
     .catch(ui.failure)
@@ -49,5 +51,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onGetArtists
 }

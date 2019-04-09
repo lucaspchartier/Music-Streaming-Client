@@ -1,8 +1,8 @@
-# Music Database App (Client)
+# Music Database (Client)
 
 # How it works
 
-### Once the user signs in, the user can add, display, update, and remove artists of his or her choosing. Similar to Spotify and other similar music apps, the user can build his or her library with a wide variety of artists and customize it to their liking.
+### Once the user signs in, the user can add, display, update, and remove artists of his or her choosing. The user can build his or her library with a wide variety of artists and customize it to their liking.
 
 # Links
 

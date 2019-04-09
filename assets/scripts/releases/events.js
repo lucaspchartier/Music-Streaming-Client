@@ -1,15 +1,16 @@
 'use strict'
 
 // const getFormFields = require('../../../lib/get-form-fields.js')
-const api = require('./api.js')
+const releaseApi = require('./api.js')
+const artistApi = require('../artists/api.js')
 const ui = require('./ui.js')
 
 // const onCreateRelease = (event) => {
 //   event.preventDefault()
 //   const releaseData = getFormFields(event.target)
-//   api.createRelease(releaseData)
+//   releaseApi.createRelease(releaseData)
 //     .then(ui.createReleaseSuccess)
-//     .then(() => api.getArtists())
+//     .then(() => artistApi.getArtists())
 //     .then(ui.getArtistsAutoSuccess)
 //     .catch(ui.failure)
 // }
@@ -17,21 +18,20 @@ const ui = require('./ui.js')
 // const onUpdateRelease = (event) => {
 //   event.preventDefault()
 //   const releaseData = getFormFields(event.target)
-//   api.updateRelease(releaseData)
+//   releaseApi.updateRelease(releaseData)
 //     .then(ui.updateReleaseSuccess)
-//     .then(() => api.getArtists())
+//     .then(() => artistApi.getArtists())
 //     .then(ui.getArtistsAutoSuccess)
 //     .catch(ui.failure)
 // }
 
 const onDeleteRelease = (event) => {
   event.preventDefault()
-  // debugger
   const id = $(event.target).closest('section').data('id')
   console.log(id)
-  api.deleteRelease(id)
+  releaseApi.deleteRelease(id)
     .then(ui.deleteReleaseSuccess)
-    .then(() => api.getArtists())
+    .then(() => artistApi.getArtists())
     .then(ui.getArtistsAutoSuccess)
     .catch(ui.failure)
 }

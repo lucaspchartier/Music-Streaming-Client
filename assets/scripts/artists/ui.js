@@ -24,7 +24,6 @@ const failure = () => {
 }
 
 const getArtistsSuccess = (response) => {
-  console.log('this is getArtistsSuccess', getArtistsSuccess)
   $('.artist-list').empty()
   const showArtistsHtml = showArtistsTemplate({ artists: response.artists })
   $('.artist-list').html(showArtistsHtml)

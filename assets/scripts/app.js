@@ -30,6 +30,11 @@ $(() => {
     $('.sign-up-form').slideUp(500)
   })
   $('#change-password-btn').click(function () {
+    $('.create-artist-form').slideDown(300)
     $('.change-password-form').slideDown(500)
+  })
+  $('#create-artist-btn').click(function () {
+    $('.change-password-form').slideDown(300)
+    $('.create-artist-form').slideDown(500)
   })
 })

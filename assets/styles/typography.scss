@@ -24,6 +24,11 @@ div {
   color: $background-color;
 }
 
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus {
+  color: $background-color;
+}
+
 .form-inline {
   button {
     border-color: $background-color;
@@ -32,7 +37,9 @@ div {
     background-color: $text-color;
   }
   .sign-out-btn,
-  .change-password-btn {
+  .change-password-btn,
+  .create-artist-btn,
+  .get-artists-btn {
     display: none;
   }
 }
@@ -56,6 +63,25 @@ div {
     margin: 0 auto;
   }
   .change-password-form {
+    display: none;
+    margin: 0 auto;
+  }
+  form {
+    margin: 10px;
+  }
+  input {
+    width: 125px;
+  }
+  legend {
+    font-size: 18px;
+  }
+}
+
+.artist-form {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  .create-artist-form {
     display: none;
     margin: 0 auto;
   }
@@ -96,4 +122,24 @@ html [type="button"], [type="reset"], [type="submit"] {
   -webkit-appearance: button;
   background-color: $text-color;
   color: $background-color;
+}
+
+#sign-up-form {
+  color: $text-color;
+  text-align: center;
+}
+
+#sign-in-form {
+  color: $text-color;
+  text-align: center;
+}
+
+#change-password-form {
+  color: $text-color;
+  text-align: center;
+}
+
+#create-artist-form {
+  color: $text-color;
+  text-align: center;
 }

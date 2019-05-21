@@ -3,7 +3,7 @@
 const store = require('./../store.js')
 
 const signUpSuccess = function (signUpResponse) {
-  $('.auth-message').html('Sign up successful!')
+  $('.auth-message').html('Signed up successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
   setTimeout(function () {
@@ -22,10 +22,12 @@ const failure = function (failureResponse) {
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
-  $('.auth-message').html('Login successful!')
+  $('.auth-message').html('Logged in successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
+  $('.sign-up-form').trigger('reset')
   $('.sign-up-form').slideUp(500)
+  $('.sign-in-form').trigger('reset')
   $('.sign-in-form').slideUp(500)
   $('#change-password-btn').show()
   $('#sign-out-btn').show()
@@ -41,7 +43,7 @@ const signInSuccess = function (signInResponse) {
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
-  $('.auth-message').html('Password change successful!')
+  $('.auth-message').html('Password changed successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
   setTimeout(function () {
@@ -50,7 +52,7 @@ const changePasswordSuccess = function (changePasswordResponse) {
 }
 
 const signOutSuccess = function (signOutResponse) {
-  $('.auth-message').html('Logout successful!')
+  $('.auth-message').html('Logged out successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
   $('#change-password-form').trigger('reset')

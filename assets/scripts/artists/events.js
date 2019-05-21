@@ -45,7 +45,7 @@ const onDeleteArtist = (event) => {
 
 const addHandlers = () => {
   $('#create-artist-form').on('submit', onCreateArtist)
-  $('#get-artists-button').on('submit', onGetArtists)
+  $('#get-artists-btn').on('submit', onGetArtists)
   $('#update-artist-form').on('submit', onUpdateArtist)
   $('.artist-list').on('click', '.delete-artist', onDeleteArtist)
 }

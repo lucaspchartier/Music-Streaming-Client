@@ -13,6 +13,63 @@ div {
   padding: 25px;
 }
 
+.navbar {
+  height: 80px;
+  span {
+    height: 30px;
+  }
+}
+
+.navbar-dark .navbar-brand {
+  color: $background-color;
+}
+
+.form-inline {
+  button {
+    border-color: $background-color;
+    color: $background-color;
+    margin-right: 10px;
+    background-color: $text-color;
+  }
+  .sign-out-btn,
+  .change-password-btn {
+    display: none;
+  }
+}
+
+.btn-outline-warning:hover {
+    color: $text-color;
+    background-color: $background-color;
+    border-color: $background-color;
+}
+
+.auth-form {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  .sign-up-form {
+    display: none;
+    margin: 0 auto;
+  }
+  .sign-in-form {
+    display: none;
+    margin: 0 auto;
+  }
+  .change-password-form {
+    display: none;
+    margin: 0 auto;
+  }
+  form {
+    margin: 10px;
+  }
+  input {
+    width: 125px;
+  }
+  legend {
+    font-size: 18px;
+  }
+}
+
 .hidden {
   visibility: hidden;
 }
@@ -32,4 +89,11 @@ div {
 .artist-list {
   font-size: 10px;
   text-align: left;
+}
+
+button,
+html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  background-color: $text-color;
+  color: $background-color;
 }

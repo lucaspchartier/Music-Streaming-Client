@@ -9,18 +9,14 @@ const createArtistSuccess = (createArtistResponse) => {
   $('.artist-message').addClass('success-message')
   $('.artist-message').removeClass('error-message')
   $('#create-artist-form').trigger('reset')
-  setTimeout(function () {
-    $('.artist-message').empty()
-  }, 2000)
+  setTimeout(() => $('.artist-message').empty(), 2000)
 }
 
 const failure = () => {
   $('.artist-message').html('Error: Something went wrong.')
   $('.artist-message').addClass('error-message')
   $('.artist-message').removeClass('success-message')
-  setTimeout(function () {
-    $('.artist-message').empty()
-  }, 2000)
+  setTimeout(() => $('.artist-message').empty(), 2000)
 }
 
 const getArtistsSuccess = (response) => {
@@ -30,9 +26,7 @@ const getArtistsSuccess = (response) => {
   $('.artist-message').html('Successfully retrieved artists!')
   $('.artist-message').addClass('success-message')
   $('.artist-message').removeClass('error-message')
-  setTimeout(function () {
-    $('.artist-message').empty()
-  }, 2000)
+  setTimeout(() => $('.artist-message').empty(), 2000)
 }
 
 const getArtistsAutoSuccess = (response) => {
@@ -46,18 +40,14 @@ const updateArtistSuccess = (updateArtistResponse) => {
   $('.artist-message').addClass('success-message')
   $('.artist-message').removeClass('error-message')
   $('#update-artist-form').trigger('reset')
-  setTimeout(function () {
-    $('.artist-message').empty()
-  }, 2000)
+  setTimeout(() => $('.artist-message').empty(), 2000)
 }
 
 const deleteArtistSuccess = () => {
   $('.artist-message').html('Successfully deleted artist!')
   $('.artist-message').addClass('success-message')
   $('.artist-message').removeClass('error-message')
-  setTimeout(function () {
-    $('.artist-message').empty()
-  }, 2000)
+  setTimeout(() => $('.artist-message').empty(), 2000)
 }
 
 module.exports = {

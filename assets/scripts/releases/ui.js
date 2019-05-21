@@ -17,9 +17,7 @@ const failure = () => {
   $('.release-message').html('Error: Something went wrong.')
   $('.release-message').addClass('error-message')
   $('.release-message').removeClass('success-message')
-  setTimeout(function () {
-    $('.release-message').empty()
-  }, 2000)
+  setTimeout(() => $('.release-message').empty(), 2000)
 }
 
 const updateReleaseSuccess = (updateReleaseResponse) => {
@@ -28,9 +26,7 @@ const updateReleaseSuccess = (updateReleaseResponse) => {
   $('.release-message').addClass('success-message')
   $('.release-message').removeClass('error-message')
   $('.update-release-form').trigger('reset')
-  setTimeout(function () {
-    $('.release-message').empty()
-  }, 2000)
+  setTimeout(() => $('.release-message').empty(), 2000)
 }
 
 const deleteReleaseSuccess = () => {
@@ -38,9 +34,7 @@ const deleteReleaseSuccess = () => {
   $('.release-message').html('Successfully deleted release!')
   $('.release-message').addClass('success-message')
   $('.release-message').removeClass('error-message')
-  setTimeout(function () {
-    $('.release-message').empty()
-  }, 2000)
+  setTimeout(() => $('.release-message').empty(), 2000)
 }
 
 module.exports = {

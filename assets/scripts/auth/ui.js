@@ -6,18 +6,14 @@ const signUpSuccess = (signUpResponse) => {
   $('.auth-message').html('Signed up successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
-  setTimeout(function () {
-    $('.auth-message').empty()
-  }, 2000)
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 const failure = (failureResponse) => {
   $('.auth-message').html('Error: Something went wrong.')
   $('.auth-message').addClass('error-message')
   $('.auth-message').removeClass('success-message')
-  setTimeout(function () {
-    $('.auth-message').empty()
-  }, 2000)
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 const signInSuccess = (signInResponse) => {
@@ -25,9 +21,7 @@ const signInSuccess = (signInResponse) => {
   $('.auth-message').html('Logged in successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
-  $('.sign-up-form').trigger('reset')
   $('.sign-up-form').slideUp(500)
-  $('.sign-in-form').trigger('reset')
   $('.sign-in-form').slideUp(500)
   $('#change-password-btn').show()
   $('#sign-out-btn').show()
@@ -37,25 +31,20 @@ const signInSuccess = (signInResponse) => {
   $('#get-artists-btn').show()
   $('#update-artist-form').show()
   $('#content').show()
-  setTimeout(function () {
-    $('.auth-message').empty()
-  }, 2000)
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 const changePasswordSuccess = (changePasswordResponse) => {
   $('.auth-message').html('Password changed successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
-  setTimeout(function () {
-    $('.auth-message').empty()
-  }, 2000)
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 const signOutSuccess = (signOutResponse) => {
   $('.auth-message').html('Logged out successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
-  $('#change-password-form').trigger('reset')
   $('#change-password-form').slideUp(500)
   $('#change-password-btn').hide()
   $('#sign-out-btn').hide()
@@ -65,9 +54,7 @@ const signOutSuccess = (signOutResponse) => {
   $('#get-artists-btn').hide()
   $('#update-artist-form').hide()
   $('.artist-list').empty()
-  setTimeout(function () {
-    $('.auth-message').empty()
-  }, 2000)
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 module.exports = {

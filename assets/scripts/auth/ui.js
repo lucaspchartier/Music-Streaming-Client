@@ -2,7 +2,7 @@
 
 const store = require('./../store.js')
 
-const signUpSuccess = function (signUpResponse) {
+const signUpSuccess = (signUpResponse) => {
   $('.auth-message').html('Signed up successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
@@ -11,7 +11,7 @@ const signUpSuccess = function (signUpResponse) {
   }, 2000)
 }
 
-const failure = function (failureResponse) {
+const failure = (failureResponse) => {
   $('.auth-message').html('Error: Something went wrong.')
   $('.auth-message').addClass('error-message')
   $('.auth-message').removeClass('success-message')
@@ -20,7 +20,7 @@ const failure = function (failureResponse) {
   }, 2000)
 }
 
-const signInSuccess = function (signInResponse) {
+const signInSuccess = (signInResponse) => {
   store.user = signInResponse.user
   $('.auth-message').html('Logged in successfully!')
   $('.auth-message').addClass('success-message')
@@ -42,7 +42,7 @@ const signInSuccess = function (signInResponse) {
   }, 2000)
 }
 
-const changePasswordSuccess = function (changePasswordResponse) {
+const changePasswordSuccess = (changePasswordResponse) => {
   $('.auth-message').html('Password changed successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
@@ -51,7 +51,7 @@ const changePasswordSuccess = function (changePasswordResponse) {
   }, 2000)
 }
 
-const signOutSuccess = function (signOutResponse) {
+const signOutSuccess = (signOutResponse) => {
   $('.auth-message').html('Logged out successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')

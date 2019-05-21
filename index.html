@@ -19,13 +19,15 @@
           <form class="form-inline">
             <button class="btn btn-outline-warning sign-up-btn" id="sign-up-btn" type="button">Sign Up</button>
             <button class="btn btn-outline-warning sign-in-btn" id="sign-in-btn" type="button">Log In</button>
+            <button class="btn btn-outline warning create-artist-btn" id="create-artist-btn" type="button">Create Artist</button>
+            <button class="btn btn-outline warning get-artists-btn" id="get-artists-btn" type="button">Get Artists</button>
             <button class="btn btn-outline-warning sign-out-btn" id="sign-out-btn" type="button">Log Out</button>
             <button class="btn btn-outline-warning change-password-btn" id="change-password-btn" type="button">Change Password</button>
           </form>
         </nav>
       <!-- Auth messages -->
       <div class="auth-message"></div>
-      <!-- Auth form -->
+      <!-- Form -->
       <div class="auth-form" id="auth-form">
         <form class="sign-up-form center" id="sign-up-form">
           <legend>Sign Up</legend>
@@ -35,10 +37,10 @@
             <input type="submit" value="Sign Up">
         </form>
         <form class="sign-in-form center" id="sign-in-form">
-            <legend>Log In</legend>
-              <input type="email" name="credentials[email]" placeholder="Email">
-              <input type="password" name="credentials[password]" placeholder="Password">
-              <input type="submit" value="Log In">
+          <legend>Log In</legend>
+            <input type="email" name="credentials[email]" placeholder="Email">
+            <input type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" value="Log In">
         </form>
         <form class="change-password-form center" id="change-password-form" >
           <legend>Change Password</legend>
@@ -47,26 +49,22 @@
             <input type="submit" value="Change Password">
         </form>
       </div>
+      <!-- Artist form -->
+      <div class="artist-form" id="artist-form">
+        <form class="create-artist-form center" id="create-artist-form">
+          <legend>Create Artist</legend>
+            <input type="text" name="artist[name]" placeholder="Name">
+            <input type="text" name="artist[year_formed]" placeholder="Year Formed">
+            <input type="text" name="artist[genre]" placeholder="Genre">
+            <input type="submit" value="Create Artist">
+        </form>
+      </div>
       <!-- Artist messages -->
       <div class="artist-message"></div>
       <!-- Release messages -->
       <div class="release-message"></div>
       <!--Artist content -->
       <div id="content" class="content hidden">
-        <!--create artist form starts here! -->
-        <form id="create-artist-form" class="hidden">
-          <input type='text' placeholder='Artist Name' name='artist[name]' required>
-          <input type='text' placeholder='Year Formed' name='artist[year_formed]' required>
-          <input type='text' placeholder='Genre' name='artist[genre]' required>
-          <input type='submit' value='Create Artist'>
-        </form>
-        <!--create artist form ends here! -->
-        <br>
-        <!-- get artists button goes here! -->
-        <form id="get-artists-button" class="hidden">
-          <input type='submit' value='Get Artists'>
-        </form>
-        <br>
         <!-- update artist form starts here! -->
         <form id="update-artist-form" class="hidden">
           <input type='text' placeholder='Artist ID' name='artist[id]' required>

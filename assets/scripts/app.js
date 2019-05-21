@@ -22,19 +22,19 @@ $(() => {
 
   // Form toggles
   $('#sign-up-btn').click(function () {
-    $('.sign-up-form').slideDown(300)
+    $('.sign-up-form').slideDown(500)
     $('.sign-in-form').slideUp(500)
   })
   $('#sign-in-btn').click(function () {
-    $('.sign-in-form').slideDown(300)
+    $('.sign-in-form').slideDown(500)
     $('.sign-up-form').slideUp(500)
   })
   $('#change-password-btn').click(function () {
-    $('.change-password-form').slideDown(300)
+    $('.change-password-form').slideDown(500)
     $('.create-artist-form').slideUp(500)
   })
   $('#create-artist-btn').click(function () {
-    $('.create-artist-form').slideDown(300)
+    $('.create-artist-form').slideDown(500)
     $('.change-password-form').slideUp(500)
   })
 })

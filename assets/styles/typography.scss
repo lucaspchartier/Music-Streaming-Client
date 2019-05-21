@@ -50,7 +50,7 @@ div {
   border-color: $background-color;
 }
 
-.auth-form {
+.form {
   width: 100%;
   position: absolute;
   text-align: center;
@@ -66,21 +66,6 @@ div {
     display: none;
     margin: 0 auto;
   }
-  form {
-    margin: 10px;
-  }
-  input {
-    width: 150px;
-  }
-  legend {
-    font-size: 18px;
-  }
-}
-
-.artist-form {
-  width: 100%;
-  position: absolute;
-  text-align: center;
   .create-artist-form {
     display: none;
     margin: 0 auto;

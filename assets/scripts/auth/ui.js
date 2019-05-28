@@ -41,7 +41,7 @@ const changePasswordSuccess = (changePasswordResponse) => {
   setTimeout(() => $('.auth-message').empty(), 500)
 }
 
-const signOutSuccess = (signOutResponse) => {
+const signOutSuccess = () => {
   $('.auth-message').html('Logged out successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')

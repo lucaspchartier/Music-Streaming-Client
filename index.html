@@ -29,8 +29,8 @@
         <div class="form" id="form">
           <form class="sign-up-form center" id="sign-up-form">
             <legend>Sign Up</legend>
-              <input class='input-field pass style' type="email" name="credentials[email]" placeholder="Email">
-              <input class='input-field confirm-pass style' type="password" name="credentials[password]" placeholder="Password">
+              <input class='input-field pass style' type="email" name="credentials[email]" required minlength='6' placeholder="Email">
+              <input class='input-field confirm-pass style' type="password" name="credentials[password]" required minlength='6' placeholder="Password">
               <input class='input-field style' type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
               <input type="submit" value="Sign Up">
           </form>
@@ -43,7 +43,7 @@
           <form class="change-password-form center" id="change-password-form" >
             <legend>Change Password</legend>
               <input class='input-field old-pass style' type="password" name="passwords[old]" placeholder="Old Password">
-              <input class='input-field new-pass style' type="password" name="passwords[new]" placeholder="New Password">
+              <input class='input-field new-pass style' type="password" name="passwords[new]" required minlength='6' placeholder="New Password">
               <input type="submit" value="Change Password">
           </form>
           <form class="create-artist-form center" id="create-artist-form">

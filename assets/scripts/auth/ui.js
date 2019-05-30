@@ -6,21 +6,21 @@ const signUpSuccess = (signUpResponse) => {
   $('.auth-message').html('Signed up successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
-  setTimeout(() => $('.auth-message').empty(), 500)
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 const failure = (failureResponse) => {
   $('.auth-message').html('Error: Something went wrong.')
   $('.auth-message').addClass('error-message')
   $('.auth-message').removeClass('success-message')
-  setTimeout(() => $('.auth-message').empty(), 500)
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 const passwordsDontMatch = (failureResponse) => {
   $('.auth-message').html('Passwords do not match.')
   $('.auth-message').addClass('error-message')
   $('.auth-message').removeClass('success-message')
-  setTimeout(() => $('.auth-message').empty(), 500)
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 const signInSuccess = (signInResponse) => {
@@ -38,14 +38,21 @@ const signInSuccess = (signInResponse) => {
   $('#get-artists-btn').show()
   $('#update-artist-form').show()
   $('#content').show()
-  setTimeout(() => $('.auth-message').empty(), 500)
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 const changePasswordSuccess = (changePasswordResponse) => {
   $('.auth-message').html('Password changed successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
-  setTimeout(() => $('.auth-message').empty(), 500)
+  setTimeout(() => $('.auth-message').empty(), 2000)
+}
+
+const changePasswordFailure = (failureResposne) => {
+  $('.auth-message').html('New password cannot match old password.')
+  $('.auth-message').addClass('error-message')
+  $('.auth-message').removeClass('success-message')
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 const signOutSuccess = () => {
@@ -64,7 +71,7 @@ const signOutSuccess = () => {
   $('#get-artists-btn').hide()
   $('#update-artist-form').hide()
   $('.artist-list').empty()
-  setTimeout(() => $('.auth-message').empty(), 500)
+  setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
 module.exports = {
@@ -73,5 +80,6 @@ module.exports = {
   passwordsDontMatch,
   signInSuccess,
   changePasswordSuccess,
+  changePasswordFailure,
   signOutSuccess
 }

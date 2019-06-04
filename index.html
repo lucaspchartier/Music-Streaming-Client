@@ -19,10 +19,10 @@
           <form class="form-inline">
             <button class="btn btn-outline-warning sign-up-btn" id="sign-up-btn" type="button">Sign Up</button>
             <button class="btn btn-outline-warning sign-in-btn" id="sign-in-btn" type="button">Log In</button>
-            <button class="btn btn-outline-warning create-artist-btn" id="create-artist-btn" type="button">Create Artist</button>
             <button class="btn btn-outline-warning get-artists-btn" id="get-artists-btn" type="button">Get Artists</button>
-            <button class="btn btn-outline-warning sign-out-btn" id="sign-out-btn" type="button">Log Out</button>
+            <button class="btn btn-outline-warning create-artist-btn" id="create-artist-btn" type="button">Create Artist</button>
             <button class="btn btn-outline-warning change-password-btn" id="change-password-btn" type="button">Change Password</button>
+            <button class="btn btn-outline-warning sign-out-btn" id="sign-out-btn" type="button">Log Out</button>
           </form>
         </nav>
         <!-- Form -->
@@ -40,18 +40,18 @@
               <input class='input-field style' type="password" name="credentials[password]" placeholder="Password">
               <input type="submit" value="Log In">
           </form>
-          <form class="change-password-form center" id="change-password-form" >
-            <legend>Change Password</legend>
-              <input class='input-field old-pass style' type="password" name="passwords[old]" placeholder="Old Password">
-              <input class='input-field new-pass style' type="password" name="passwords[new]" required minlength='6' placeholder="New Password">
-              <input type="submit" value="Change Password">
-          </form>
           <form class="create-artist-form center" id="create-artist-form">
             <legend>Create Artist</legend>
               <input type="text" name="artist[name]" placeholder="Name">
               <input type="text" name="artist[year_formed]" placeholder="Year Formed">
               <input type="text" name="artist[genre]" placeholder="Genre">
               <input type="submit" value="Create Artist">
+          </form>
+          <form class="change-password-form center" id="change-password-form" >
+            <legend>Change Password</legend>
+              <input class='input-field old-pass style' type="password" name="passwords[old]" placeholder="Old Password">
+              <input class='input-field new-pass style' type="password" name="passwords[new]" required minlength='6' placeholder="New Password">
+              <input type="submit" value="Change Password">
           </form>
         </div>
         <!--Artist content -->

@@ -53,5 +53,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
+  onGetArtists,
   addHandlers
 }

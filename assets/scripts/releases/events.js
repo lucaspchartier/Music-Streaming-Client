@@ -33,11 +33,7 @@ const onDeleteRelease = (event) => {
   const id = $(event.target).closest('section').data('id')
   releaseApi.deleteRelease(id)
     .then(ui.deleteReleaseSuccess)
-    // .then(() => artistApi.getArtists())
-    // .then(ui.getArtistsAutoSuccess)
-  console.log('This is artistEvents.addHandlers.onGetArtists() ', artistEvents.addHandlers.onGetArtists())
-    .then(() => artistEvents.addHandlers.onGetArtists())
-    .catch(ui.failure)
+    .then(() => artistEvents.onGetArtists())
 }
 
 const addHandlers = () => {

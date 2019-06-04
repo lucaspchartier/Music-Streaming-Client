@@ -53,6 +53,5 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers,
-  onGetArtists
+  addHandlers
 }

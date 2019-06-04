@@ -29,15 +29,14 @@ const ui = require('./ui.js')
 // }
 
 const onDeleteRelease = (event) => {
-  console.log('this is onDeleteRelease', onDeleteRelease)
   event.preventDefault()
   const id = $(event.target).closest('section').data('id')
-  console.log(id)
   releaseApi.deleteRelease(id)
     .then(ui.deleteReleaseSuccess)
     // .then(() => artistApi.getArtists())
     // .then(ui.getArtistsAutoSuccess)
-    .then(() => artistEvents.onGetArtists())
+  console.log('This is artistEvents.addHandlers.onGetArtists() ', artistEvents.addHandlers.onGetArtists())
+    .then(() => artistEvents.addHandlers.onGetArtists())
     .catch(ui.failure)
 }
 

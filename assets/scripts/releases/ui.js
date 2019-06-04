@@ -28,7 +28,6 @@ const updateReleaseSuccess = (updateReleaseResponse) => {
 }
 
 const deleteReleaseSuccess = () => {
-  console.log('this is deleteReleaseSuccess', deleteReleaseSuccess)
   $('.release-message').html('Successfully deleted release!')
   $('.release-message').addClass('success-message')
   $('.release-message').removeClass('error-message')

@@ -37,7 +37,6 @@ const signInSuccess = (signInResponse) => {
   $('#create-artist-btn').show()
   $('#get-artists-btn').show()
   $('#update-artist-form').show()
-  $('#content').show()
   setTimeout(() => $('.auth-message').empty(), 2000)
 }
 

@@ -13,10 +13,25 @@ const releaseEvents = require('./releases/events.js')
 $(() => {
   // Auth events
   authEvents.addHandlers()
-
   // Arists events
   artistEvents.addHandlers()
-
   // Releases events
   releaseEvents.addHandlers()
+  // Form toggles
+  $('#sign-up-btn').click(() => {
+    $('.sign-up-form').slideDown(300)
+    $('.sign-in-form').slideUp(500)
+  })
+  $('#sign-in-btn').click(() => {
+    $('.sign-in-form').slideDown(300)
+    $('.sign-up-form').slideUp(500)
+  })
+  $('#change-password-btn').click(() => {
+    $('.change-password-form').slideDown(300)
+    $('.create-artist-form').slideUp(500)
+  })
+  $('#create-artist-btn').click(() => {
+    $('.create-artist-form').slideDown(300)
+    $('.change-password-form').slideUp(500)
+  })
 })

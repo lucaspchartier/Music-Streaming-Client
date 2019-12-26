@@ -7,6 +7,7 @@ const ui = require('./ui.js')
 const onCreateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
+  $(event.target).trigger('reset')
   api.createArtist(artistData)
     .then(ui.createArtistSuccess)
     .then(() => api.getArtists())
@@ -15,7 +16,9 @@ const onCreateArtist = (event) => {
 }
 
 const onGetArtists = (event) => {
-  event.preventDefault()
+  if (event) {
+    event.preventDefault()
+  }
   api.getArtists()
     .then(ui.getArtistsSuccess)
     .catch(ui.failure)
@@ -24,6 +27,7 @@ const onGetArtists = (event) => {
 const onUpdateArtist = (event) => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
+  $(event.target).trigger('reset')
   api.updateArtist(artistData)
     .then(ui.updateArtistSuccess)
     .then(() => api.getArtists())
@@ -43,11 +47,12 @@ const onDeleteArtist = (event) => {
 
 const addHandlers = () => {
   $('#create-artist-form').on('submit', onCreateArtist)
-  $('#get-artists-button').on('submit', onGetArtists)
+  $('#get-artists-btn').on('click', onGetArtists)
   $('#update-artist-form').on('submit', onUpdateArtist)
   $('.artist-list').on('click', '.delete-artist', onDeleteArtist)
 }
 
 module.exports = {
+  onGetArtists,
   addHandlers
 }

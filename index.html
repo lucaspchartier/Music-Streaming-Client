@@ -6,38 +6,54 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="icon" type="image/png" href="public/img/music.png">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Music Database</h1>
-      <!-- Auth messages -->
-      <div class="auth-message"></div>
-
-      <!-- Artist messages -->
-      <div class="artist-message"></div>
-
-      <!-- Release messages -->
-      <div class="release-message"></div>
-
-      <!--Artist content -->
-      <div id="content" class="content hidden">
-        <!--create artist form starts here! -->
-        <form id="create-artist-form" class="hidden">
-          <input type='text' placeholder='Artist Name' name='artist[name]' required>
-          <input type='text' placeholder='Year Formed' name='artist[year_formed]' required>
-          <input type='text' placeholder='Genre' name='artist[genre]' required>
-          <input type='submit' value='Create Artist'>
-        </form>
-        <!--create artist form ends here! -->
-        <br>
-        <!-- get artists button goes here! -->
-        <form id="get-artists-button" class="hidden">
-          <input type='submit' value='Get Artists'>
-        </form>
-        <br>
+      <!-- Navbar -->
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Music Database</span>
+          <form class="form-inline">
+            <button class="btn btn-outline-warning sign-up-btn" id="sign-up-btn" type="button">Sign Up</button>
+            <button class="btn btn-outline-warning sign-in-btn" id="sign-in-btn" type="button">Log In</button>
+            <button class="btn btn-outline-warning get-artists-btn" id="get-artists-btn" type="button">Get Artists</button>
+            <button class="btn btn-outline-warning create-artist-btn" id="create-artist-btn" type="button">Create Artist</button>
+            <button class="btn btn-outline-warning change-password-btn" id="change-password-btn" type="button">Change Password</button>
+            <button class="btn btn-outline-warning sign-out-btn" id="sign-out-btn" type="button">Log Out</button>
+          </form>
+        </nav>
+        <!-- Form -->
+        <div class="form" id="form">
+          <form class="sign-up-form center" id="sign-up-form">
+            <legend>Sign Up</legend>
+              <input class='input-field style' type="email" name="credentials[email]" required minlength='6' placeholder="Email">
+              <input class='input-field pass style' type="password" name="credentials[password]" required minlength='6' placeholder="Password">
+              <input class='input-field confirm-pass style' type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <input type="submit" value="Sign Up">
+          </form>
+          <form class="sign-in-form center" id="sign-in-form">
+            <legend>Log In</legend>
+              <input class='input-field style' type="email" name="credentials[email]" placeholder="Email">
+              <input class='input-field style' type="password" name="credentials[password]" placeholder="Password">
+              <input type="submit" value="Log In">
+          </form>
+          <form class="create-artist-form center" id="create-artist-form">
+            <legend>Create Artist</legend>
+              <input type="text" name="artist[name]" placeholder="Name">
+              <input type="text" name="artist[year_formed]" placeholder="Year Formed">
+              <input type="text" name="artist[genre]" placeholder="Genre">
+              <input type="submit" value="Create Artist">
+          </form>
+          <form class="change-password-form center" id="change-password-form" >
+            <legend>Change Password</legend>
+              <input class='input-field old-pass style' type="password" name="passwords[old]" placeholder="Old Password">
+              <input class='input-field new-pass style' type="password" name="passwords[new]" required minlength='6' placeholder="New Password">
+              <input type="submit" value="Change Password">
+          </form>
+        </div>
         <!-- update artist form starts here! -->
         <form id="update-artist-form" class="hidden">
           <input type='text' placeholder='Artist ID' name='artist[id]' required>
@@ -52,41 +68,21 @@
         <div class="artist-list"></div>
         <!-- artist list ends here! -->
         <br>
-      </div>
-      <div class="form">
-        <!-- sign-up form starts here! -->
-        <form id="sign-up-form" class="form">
-          <legend>Sign Up</legend>
-          <input name="credentials[email]" type="text" placeholder="email"/>
-          <input name="credentials[password]" type="password" placeholder="password"/>
-          <input name="credentials[password_confirmation]" type="password" placeholder="confirm password"/>
-          <input type="submit" />
+        <!-- create release form starts here! -->
+        <form id="create-release-form" class="hidden">
+          <input type='text' placeholder='Artist ID' name='release[artist_id]' required>
+          <input type='text' placeholder='Title' name='release[title]' required>
+          <input type='text' placeholder='Year Released' name='release[year_released]' required>
+          <input type='text' placeholder='Number of Tracks' name='release[number_of_tracks]' required>
+          <input type='submit' value='Create Release'>
         </form>
-        <!-- sign-up form ends here! -->
+        <!-- create release form ends here! -->
         <br>
-
-        <!-- sign-in form starts here! -->
-        <form id="sign-in-form" class="form">
-          <legend>Log In</legend>
-          <input name="credentials[email]" type="text" placeholder="email"/>
-          <input name="credentials[password]" type="password" placeholder="password"/>
-          <input type="submit" />
-        </form>
-        <!--sign-in form ends here! -->
-        <br>
-
-        <!-- change password form starts here! -->
-        <form id="change-password-form" class="form hidden">
-          <legend>Change Password</legend>
-          <input name="passwords[old]" type="password" placeholder="old password"/>
-          <input name="passwords[new]" type="password" placeholder="new password"/>
-          <input type="submit" />
-        </form>
-        <!-- change password form ends here! -->
-        <br>
-
-        <!-- sign out button goes here! -->
-        <button id="sign-out-button" class="form hidden">Log Out</button>
-      </div>
+        <!-- Auth messages -->
+        <div class="auth-message"></div>
+        <!-- Artist messages -->
+        <div class="artist-message"></div>
+        <!-- Release messages -->
+        <div class="release-message"></div>
     </body>
 </html>

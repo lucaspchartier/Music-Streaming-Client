@@ -3,7 +3,7 @@
 const config = require('../config')
 const store = require('../store')
 
-const createArtist = function (artistData) {
+const createArtist = (artistData) => {
   return $.ajax({
     url: config.apiUrl + '/artists',
     method: 'POST',
@@ -15,7 +15,7 @@ const createArtist = function (artistData) {
   })
 }
 
-const getArtists = function () {
+const getArtists = () => {
   return $.ajax({
     url: config.apiUrl + '/artists',
     method: 'GET',
@@ -26,7 +26,7 @@ const getArtists = function () {
   })
 }
 
-const updateArtist = function (artistData) {
+const updateArtist = (artistData) => {
   return $.ajax({
     url: config.apiUrl + `/artists/${artistData.artist.id}`,
     method: 'PATCH',
@@ -38,7 +38,7 @@ const updateArtist = function (artistData) {
   })
 }
 
-const deleteArtist = function (id) {
+const deleteArtist = (id) => {
   return $.ajax({
     url: config.apiUrl + `/artists/${id}`,
     method: 'DELETE',

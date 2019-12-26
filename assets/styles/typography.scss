@@ -1,16 +1,83 @@
+* {
+  font-family: 'Inconsolata', sans-serif;
+}
+
 body {
   background-color: $background-color;
   color: $text-color;
-  font-family: Impact, sans-serif;
-}
-
-h1 {
-  padding: 25px;
-  text-align: center;
 }
 
 div {
   padding: 25px;
+}
+
+.navbar {
+  height: 80px;
+  span {
+    height: 30px;
+  }
+}
+
+.navbar-dark .navbar-brand {
+  color: $background-color;
+}
+
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus {
+  color: $background-color;
+}
+
+.form-inline {
+  button {
+    border-color: $background-color;
+    border-width: thick;
+    color: $background-color;
+    margin-right: 10px;
+    background-color: $text-color;
+  }
+  .sign-out-btn,
+  .change-password-btn,
+  .create-artist-btn,
+  .get-artists-btn {
+    display: none;
+  }
+}
+
+.btn-outline-warning:hover {
+  color: $text-color;
+  background-color: $background-color;
+  border-color: $background-color;
+}
+
+.form {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  .sign-up-form {
+    display: none;
+    margin: 0 auto;
+  }
+  .sign-in-form {
+    display: none;
+    margin: 0 auto;
+  }
+  .change-password-form {
+    display: none;
+    margin: 0 auto;
+  }
+  .create-artist-form {
+    display: none;
+    margin: 0 auto;
+  }
+  form {
+    margin: 10px;
+  }
+  input {
+    width: 175px;
+  }
+  legend {
+    font-size: 18px;
+  }
 }
 
 .hidden {
@@ -32,4 +99,31 @@ div {
 .artist-list {
   font-size: 10px;
   text-align: left;
+}
+
+button,
+html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  background-color: $text-color;
+  color: $background-color;
+}
+
+#sign-up-form {
+  color: $text-color;
+  text-align: center;
+}
+
+#sign-in-form {
+  color: $text-color;
+  text-align: center;
+}
+
+#change-password-form {
+  color: $text-color;
+  text-align: center;
+}
+
+#create-artist-form {
+  color: $text-color;
+  text-align: center;
 }

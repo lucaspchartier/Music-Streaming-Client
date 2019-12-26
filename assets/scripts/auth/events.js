@@ -4,45 +4,54 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
-const onSignUp = function (event) {
+const onSignUp = (event) => {
   event.preventDefault()
   const userData = getFormFields(event.target)
-  $('.form').trigger('reset')
-  api.signUp(userData)
-    .then(ui.signUpSuccess)
-    .catch(ui.failure)
+  if ($('.pass').val() !== $('.confirm-pass').val()) {
+    $(event.target).trigger('reset')
+    ui.passwordsDontMatch()
+  } else {
+    $(event.target).trigger('reset')
+    api.signUp(userData)
+      .then(ui.signUpSuccess)
+      .catch(ui.failure)
+  }
 }
 
-const onSignIn = function (event) {
+const onSignIn = (event) => {
   event.preventDefault()
   const userData = getFormFields(event.target)
-  $('.form').trigger('reset')
+  $(event.target).trigger('reset')
   api.signIn(userData)
     .then(ui.signInSuccess)
     .catch(ui.failure)
 }
 
-const onChangePassword = function (event) {
+const onChangePassword = (event) => {
   event.preventDefault()
   const userData = getFormFields(event.target)
-  $('.form').trigger('reset')
-  api.changePassword(userData)
-    .then(ui.changePasswordSuccess)
-    .catch(ui.failure)
+  if ($('.old-pass').val() === $('.new-pass').val()) {
+    $(event.target).trigger('reset')
+    ui.changePasswordFailure()
+  } else {
+    $(event.target).trigger('reset')
+    api.changePassword(userData)
+      .then(ui.changePasswordSuccess)
+      .catch(ui.failure)
+  }
 }
 
-const onSignOut = function () {
-  $('.form').trigger('reset')
+const onSignOut = () => {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.failure)
 }
 
-const addHandlers = function () {
+const addHandlers = () => {
   $('#sign-up-form').on('submit', onSignUp)
   $('#sign-in-form').on('submit', onSignIn)
   $('#change-password-form').on('submit', onChangePassword)
-  $('#sign-out-button').on('click', onSignOut)
+  $('#sign-out-btn').on('click', onSignOut)
 }
 
 module.exports = {

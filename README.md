@@ -12,7 +12,7 @@ Once the user signs in, the user can add, display, update, and remove artists of
 
 # Wireframes and user stories
 
-* [Wireframes](https://i.imgur.com/ory029I.jpg)
+![Wireframes](https://i.imgur.com/ory029I.jpg)
 
 1. As a user, I can sign up
 2. As a signed up user, I can log in

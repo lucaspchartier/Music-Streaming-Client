@@ -5,8 +5,8 @@ Once the user signs in, the user can add, display, update, and remove artists of
 
 ### Links
 * [Music Database API](https://github.com/lucaspchartier/Music-Database-API)
-* [Deployed Site](https://lucaspchartier.github.io/Music-Database-Client/)
-* [Heroku](https://salty-wave-91914.herokuapp.com/)
+* [Deployed Client](https://lucaspchartier.github.io/Music-Database-Client/)
+* [Deployed Heroku](https://salty-wave-91914.herokuapp.com/)
 
 ### Wireframes and user stories
 ![Wireframes](https://i.imgur.com/ory029I.jpg)

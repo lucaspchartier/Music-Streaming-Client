@@ -3,7 +3,7 @@
 const config = require('../config')
 const store = require('../store')
 
-const createRelease = (releaseData) => {
+const createRelease = releaseData => {
   return $.ajax({
     url: config.apiUrl + '/releases',
     method: 'POST',
@@ -15,7 +15,7 @@ const createRelease = (releaseData) => {
   })
 }
 
-const updateRelease = (releaseData) => {
+const updateRelease = releaseData => {
   return $.ajax({
     url: config.apiUrl + `/releases/${releaseData.release.id}`,
     method: 'PATCH',
@@ -27,7 +27,7 @@ const updateRelease = (releaseData) => {
   })
 }
 
-const deleteRelease = (id) => {
+const deleteRelease = id => {
   return $.ajax({
     url: config.apiUrl + `/releases/${id}`,
     method: 'DELETE',

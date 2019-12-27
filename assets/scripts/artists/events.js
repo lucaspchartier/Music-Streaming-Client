@@ -4,7 +4,7 @@ const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 
-const onCreateArtist = (event) => {
+const onCreateArtist = event => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
   $(event.target).trigger('reset')
@@ -15,7 +15,7 @@ const onCreateArtist = (event) => {
     .catch(ui.failure)
 }
 
-const onGetArtists = (event) => {
+const onGetArtists = event => {
   if (event) {
     event.preventDefault()
   }
@@ -24,7 +24,7 @@ const onGetArtists = (event) => {
     .catch(ui.failure)
 }
 
-const onUpdateArtist = (event) => {
+const onUpdateArtist = event => {
   event.preventDefault()
   const artistData = getFormFields(event.target)
   $(event.target).trigger('reset')
@@ -35,7 +35,7 @@ const onUpdateArtist = (event) => {
     .catch(ui.failure)
 }
 
-const onDeleteArtist = (event) => {
+const onDeleteArtist = event => {
   event.preventDefault()
   const id = $(event.target).closest('section').data('id')
   api.deleteArtist(id)

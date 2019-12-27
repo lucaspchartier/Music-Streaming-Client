@@ -6,7 +6,7 @@ const releaseApi = require('./api.js')
 const artistEvents = require('../artists/events.js')
 const ui = require('./ui.js')
 
-// const onCreateRelease = (event) => {
+// const onCreateRelease = event => {
 //   event.preventDefault()
 //   const releaseData = getFormFields(event.target)
 //   $(event.target).trigger('reset')
@@ -17,7 +17,7 @@ const ui = require('./ui.js')
 //     .catch(ui.failure)
 // }
 //
-// const onUpdateRelease = (event) => {
+// const onUpdateRelease = event => {
 //   event.preventDefault()
 //   const releaseData = getFormFields(event.target)
 //   $(event.target).trigger('reset')
@@ -28,7 +28,7 @@ const ui = require('./ui.js')
 //     .catch(ui.failure)
 // }
 
-const onDeleteRelease = (event) => {
+const onDeleteRelease = event => {
   event.preventDefault()
   const id = $(event.target).closest('section').data('id')
   releaseApi.deleteRelease(id)

@@ -3,7 +3,7 @@
 const showArtistsTemplate = require('../templates/artist-listing.handlebars')
 const store = require('./../store.js')
 
-const createArtistSuccess = (createArtistResponse) => {
+const createArtistSuccess = createArtistResponse => {
   store.artist = createArtistResponse.artist
   $('.artist-message').html('Successfully created artist!')
   $('.artist-message').addClass('success-message')
@@ -19,7 +19,7 @@ const failure = () => {
   setTimeout(() => $('.artist-message').empty(), 500)
 }
 
-const getArtistsSuccess = (response) => {
+const getArtistsSuccess = response => {
   $('.artist-list').empty()
   const showArtistsHtml = showArtistsTemplate({ artists: response.artists })
   $('.artist-list').html(showArtistsHtml)
@@ -29,12 +29,12 @@ const getArtistsSuccess = (response) => {
   setTimeout(() => $('.artist-message').empty(), 500)
 }
 
-const getArtistsAutoSuccess = (response) => {
+const getArtistsAutoSuccess = response => {
   const showArtistsHtml = showArtistsTemplate({ artists: response.artists })
   $('.artist-list').html(showArtistsHtml)
 }
 
-const updateArtistSuccess = (updateArtistResponse) => {
+const updateArtistSuccess = updateArtistResponse => {
   store.artist = updateArtistResponse.artist
   $('.artist-message').html('Successfully updated artist!')
   $('.artist-message').addClass('success-message')

@@ -2,28 +2,28 @@
 
 const store = require('./../store.js')
 
-const signUpSuccess = (signUpResponse) => {
+const signUpSuccess = () => {
   $('.auth-message').html('Signed up successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
   setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
-const failure = (failureResponse) => {
+const failure = () => {
   $('.auth-message').html('Error: Something went wrong.')
   $('.auth-message').addClass('error-message')
   $('.auth-message').removeClass('success-message')
   setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
-const passwordsDontMatch = (failureResponse) => {
+const passwordsDontMatch = () => {
   $('.auth-message').html('Passwords do not match.')
   $('.auth-message').addClass('error-message')
   $('.auth-message').removeClass('success-message')
   setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
-const signInSuccess = (signInResponse) => {
+const signInSuccess = signInResponse => {
   store.user = signInResponse.user
   $('.auth-message').html('Logged in successfully!')
   $('.auth-message').addClass('success-message')
@@ -40,14 +40,14 @@ const signInSuccess = (signInResponse) => {
   setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
-const changePasswordSuccess = (changePasswordResponse) => {
+const changePasswordSuccess = () => {
   $('.auth-message').html('Password changed successfully!')
   $('.auth-message').addClass('success-message')
   $('.auth-message').removeClass('error-message')
   setTimeout(() => $('.auth-message').empty(), 2000)
 }
 
-const changePasswordFailure = (failureResposne) => {
+const changePasswordFailure = () => {
   $('.auth-message').html('New password cannot match old password.')
   $('.auth-message').addClass('error-message')
   $('.auth-message').removeClass('success-message')

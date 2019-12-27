@@ -2,7 +2,7 @@
 
 const store = require('./../store.js')
 
-const createReleaseSuccess = (createReleaseResponse) => {
+const createReleaseSuccess = createReleaseResponse => {
   store.release = createReleaseResponse.release
   $('.release-message').html('Successfully created release!')
   $('.release-message').addClass('success-message')
@@ -18,7 +18,7 @@ const failure = () => {
   setTimeout(() => $('.release-message').empty(), 500)
 }
 
-const updateReleaseSuccess = (updateReleaseResponse) => {
+const updateReleaseSuccess = updateReleaseResponse => {
   store.release = updateReleaseResponse.release
   $('.release-message').html('Successfully updated release!')
   $('.release-message').addClass('success-message')

@@ -1,5 +1,6 @@
 {{#each artists as |artist|}}
 
+  <!-- Artists -->
   <div>
     <section data-id="{{artist.id}}">
       <h1 data-id="{{artist.id}}"><small>
@@ -10,6 +11,7 @@
         <br>
         <button class="btn btn-default create-release">Create Album</button>
         {{#each artist.releases as |release|}}
+          <!-- Releases -->
           <div>
             <section data-id="{{release.id}}">
               <h4 data-id="{{release.id}}"><small>
@@ -27,5 +29,9 @@
       <button class="btn btn-default delete-artist">Remove Artist</button>
     </section>
   </div>
+
+  <!-- Create Release Modal -->
+
+  <!-- Update Release Modal -->
 
 {{/each}}

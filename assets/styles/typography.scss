@@ -38,6 +38,7 @@ div {
   .sign-out-btn,
   .change-password-btn,
   .create-artist-btn,
+  .update-artist-btn,
   .get-artists-btn {
     display: none;
   }
@@ -66,6 +67,10 @@ div {
     margin: 0 auto;
   }
   .create-artist-form {
+    display: none;
+    margin: 0 auto;
+  }
+  .update-artist-form {
     display: none;
     margin: 0 auto;
   }

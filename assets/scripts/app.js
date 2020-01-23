@@ -29,9 +29,16 @@ $(() => {
   $('#change-password-btn').click(() => {
     $('.change-password-form').slideDown(300)
     $('.create-artist-form').slideUp(500)
+    $('.update-artist-form').slideUp(500)
   })
   $('#create-artist-btn').click(() => {
     $('.create-artist-form').slideDown(300)
+    $('.update-artist-form').slideUp(500)
+    $('.change-password-form').slideUp(500)
+  })
+  $('#update-artist-btn').click(() => {
+    $('.update-artist-form').slideDown(300)
+    $('.create-artist-form').slideUp(500)
     $('.change-password-form').slideUp(500)
   })
 })

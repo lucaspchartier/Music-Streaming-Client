@@ -21,10 +21,15 @@
             <button class="btn btn-outline-warning sign-in-btn" id="sign-in-btn" type="button">Log In</button>
             <button class="btn btn-outline-warning get-artists-btn" id="get-artists-btn" type="button">Get Artists</button>
             <button class="btn btn-outline-warning create-artist-btn" id="create-artist-btn" type="button">Create Artist</button>
+            <button class="btn btn-outline-warning update-artist-btn" id="update-artist-btn" type="button">Update Artist</button>
             <button class="btn btn-outline-warning change-password-btn" id="change-password-btn" type="button">Change Password</button>
             <button class="btn btn-outline-warning sign-out-btn" id="sign-out-btn" type="button">Log Out</button>
           </form>
         </nav>
+        <!-- artist list starts here! -->
+        <div class="artist-list"></div>
+        <!-- artist list ends here! -->
+        <br>
         <!-- Form -->
         <div class="form" id="form">
           <form class="sign-up-form center" id="sign-up-form">
@@ -47,6 +52,14 @@
               <input type="text" name="artist[genre]" placeholder="Genre">
               <input type="submit" value="Create Artist">
           </form>
+          <form class="update-artist-form center" id="update-artist-form">
+            <legend>Update Artist</legend>
+              <input type="text" name="artist[id]" placeholder="ID">
+              <input type="text" name="artist[name]" placeholder="Name">
+              <input type="text" name="artist[year_formed]" placeholder="Year Formed">
+              <input type="text" name="artist[genre]" placeholder="Genre">
+              <input type="submit" value="Update Artist">
+          </form>
           <form class="change-password-form center" id="change-password-form" >
             <legend>Change Password</legend>
               <input class='input-field old-pass style' type="password" name="passwords[old]" placeholder="Old Password">
@@ -54,21 +67,7 @@
               <input type="submit" value="Change Password">
           </form>
         </div>
-        <!-- update artist form starts here! -->
-        <form id="update-artist-form" class="hidden">
-          <input type='text' placeholder='Artist ID' name='artist[id]' required>
-          <input type='text' placeholder='Artist Name' name='artist[name]' required>
-          <input type='text' placeholder='Year Formed' name='artist[year_formed]' required>
-          <input type='text' placeholder='Genre' name='artist[genre]' required>
-          <input type='submit' value='Update Artist'>
-        </form>
-        <!-- update artist form ends here! -->
         <br>
-        <!-- artist list starts here! -->
-        <div class="artist-list"></div>
-        <!-- artist list ends here! -->
-        <br>
-        <!-- create release form starts here! -->
         <form id="create-release-form" class="hidden">
           <input type='text' placeholder='Artist ID' name='release[artist_id]' required>
           <input type='text' placeholder='Title' name='release[title]' required>
@@ -76,7 +75,6 @@
           <input type='text' placeholder='Number of Tracks' name='release[number_of_tracks]' required>
           <input type='submit' value='Create Release'>
         </form>
-        <!-- create release form ends here! -->
         <br>
         <!-- Auth messages -->
         <div class="auth-message"></div>

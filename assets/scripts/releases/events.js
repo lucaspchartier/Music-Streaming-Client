@@ -1,22 +1,23 @@
 'use strict'
 
-// const getFormFields = require('../../../lib/get-form-fields.js')
+const getFormFields = require('../../../lib/get-form-fields.js')
 const releaseApi = require('./api.js')
-// const artistApi = require('../artists/api.js')
+const artistApi = require('../artists/api.js')
 const artistEvents = require('../artists/events.js')
 const ui = require('./ui.js')
+// const store = require('../store.js')
 
-// const onCreateRelease = event => {
-//   event.preventDefault()
-//   const releaseData = getFormFields(event.target)
-//   $(event.target).trigger('reset')
-//   releaseApi.createRelease(releaseData)
-//     .then(ui.createReleaseSuccess)
-//     .then(() => artistApi.getArtists())
-//     .then(ui.getArtistsAutoSuccess)
-//     .catch(ui.failure)
-// }
-//
+const onCreateRelease = event => {
+  event.preventDefault()
+  const releaseData = getFormFields(event.target)
+  $(event.target).trigger('reset')
+  releaseApi.createRelease(releaseData)
+    .then(ui.createReleaseSuccess)
+    .then(() => artistApi.getArtists())
+    .then(ui.getArtistsAutoSuccess)
+    .catch(ui.failure)
+}
+
 // const onUpdateRelease = event => {
 //   event.preventDefault()
 //   const releaseData = getFormFields(event.target)
@@ -36,8 +37,15 @@ const onDeleteRelease = event => {
     .then(() => artistEvents.onGetArtists())
 }
 
+const addReleaseToModalClick = () => {
+  // $('#create-release-form').on('click', () => $('#create-release').modal('show'))
+  $(document).on('click', '.create-release', () => $('#create-release').modal('show'))
+}
+
+addReleaseToModalClick()
+
 const addHandlers = () => {
-  // $('.create-release-form').on('submit', onCreateRelease)
+  $('.create-release-form').on('submit', onCreateRelease)
   // $('.artist-list').on('submit', onUpdateRelease)
   $('.artist-list').on('click', '.delete-release', onDeleteRelease)
 }

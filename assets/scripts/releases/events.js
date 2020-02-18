@@ -38,14 +38,16 @@ const onDeleteRelease = event => {
 }
 
 const addReleaseToModalClick = () => {
-  // $('#create-release-form').on('click', () => $('#create-release').modal('show'))
-  $(document).on('click', '.create-release', () => $('#create-release').modal('show'))
+  $(document).on('click', '.create-release', event => {
+    const id = $(event.target).closest('section').data('id')
+    console.log(event)
+    $(`#create-release-${id}`).modal('show')
+  })
 }
-
-addReleaseToModalClick()
 
 const addHandlers = () => {
   $('.create-release-form').on('submit', onCreateRelease)
+  addReleaseToModalClick()
   // $('.artist-list').on('submit', onUpdateRelease)
   $('.artist-list').on('click', '.delete-release', onDeleteRelease)
 }

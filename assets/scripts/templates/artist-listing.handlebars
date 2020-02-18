@@ -1,7 +1,7 @@
 {{#each artists as |artist|}}
 
   <!-- Artists -->
-  <div>
+  <div id="project-{{artist.id}}-artist" class="artist slide" data-title="{{artist.title}}" data-ride="artist" data-interval="2500">
     <section data-id="{{artist.id}}">
       <h1 data-id="{{artist.id}}"><small>
         Artist ID: {{artist.id}}<br>
@@ -9,7 +9,7 @@
         Year Formed: {{artist.year_formed}}<br>
         Genre: {{artist.genre}}
         <br>
-        <button class="btn btn-default create-release">Create Album</button>
+        <button data-id="{{artist.id}}" class="btn btn-default create-release">Create Album</button>
         {{#each artist.releases as |release|}}
           <!-- Releases -->
           <div>
@@ -31,6 +31,32 @@
   </div>
 
   <!-- Create Release Modal -->
+  <div id="create-release-{{artist.id}}" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h1 class="">{{artist.name}}</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="create-release-form" class="hidden">
+            <input type='text' placeholder='Artist ID' name='release[artist_id]' required>
+            <input type='text' placeholder='Title' name='release[title]' required>
+            <input type='text' placeholder='Year Released' name='release[year_released]' required>
+            <input type='text' placeholder='Number of Tracks' name='release[number_of_tracks]' required>
+            <input type='submit' value='Create Release'>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <div class="mr-auto">
+          </div>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Update Release Modal -->
 

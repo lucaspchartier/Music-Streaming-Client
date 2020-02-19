@@ -40,7 +40,6 @@ const onDeleteRelease = event => {
 const addReleaseToModalClick = () => {
   $(document).on('click', '.create-release', event => {
     const id = $(event.target).closest('section').data('id')
-    console.log(event)
     $(`#create-release-${id}`).modal('show')
   })
 }
